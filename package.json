@@ -1,0 +1,28 @@
+{
+  "name": "micro-services",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Exemple de communication entre micro-services",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archambaultv-prof/2025H-420-4D2-MA-Micro-services.git"
+  },
+  "keywords": [
+    "Education"
+  ],
+  "author": "Vincent Archambault-Bouffard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/archambaultv-prof/2025H-420-4D2-MA-Micro-services/issues"
+  },
+  "homepage": "https://github.com/archambaultv-prof/2025H-420-4D2-MA-Micro-services#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
