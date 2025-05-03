@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Microservices</title>
+</head>
+<body>
+  <h1>🎯 Test des routes</h1>
+
+  <button onclick="testRoute('/supplier')">GET /supplier</button>
+  <br><br>
+
+  <input type="number" id="supplierId" placeholder="ID utilisateur" value="1" />
+  <button onclick="testRoute('/supplier/' + document.getElementById('supplierId').value)">GET /supplier/:id</button>
+
+  <br><br>
+
+  <input type="number" id="productId" placeholder="ID produit" value="1" />
+  <button onclick="testRoute('/products/' + document.getElementById('productId').value + '/supplier')">
+    GET /products/:id/supplier
+  </button>
+
+  <h2>Résultat :</h2>
+  <pre id="result"></pre>
+
+  <script>
+    async function testRoute(path) {
+      const result = document.getElementById('result');
+      result.textContent = 'Chargement...';
+
+      try {
+        const res = await fetch(path);
+        if (!res.ok) throw new Error(`Erreur ${res.status}`);
+        const data = await res.json();
+        result.textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        result.textContent = 'Erreur : ' + err.message;
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+    "name": "service-product",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Service de gestion des produits",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "axios": "^1.9.0",
+      "express": "^5.1.0"
+    }
+  }
+  
